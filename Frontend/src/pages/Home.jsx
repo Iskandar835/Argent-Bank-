@@ -1,6 +1,12 @@
+import HomeBanner from "../components/Banner"
+
+
 function Home () {
     return(
-        <h1>coucou</h1>
+        <main>
+            <HomeBanner/>
+        </main>
+        
     )
 }
 

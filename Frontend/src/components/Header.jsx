@@ -14,7 +14,6 @@ function Header () {
                     src="../../designs/img/argentBankLogo.png" 
                     alt="Argent Bank Logo"
                 />
-                <h1 className="dr-only">Argent Bank</h1>
             </a>
             <div>
                 <a className="main-nav-item" href="">
