@@ -1,0 +1,14 @@
+Note de l'avancement du projet: 
+
+HOMEPAGE: 
+La homepage est entierment coder avec les bonnes pratiques du Green Code, les data pour les features
+sont placer dans un fichier expres pour. 
+Concernant la structure elle est identique a celle du code de base (optimisation avec ajout header),
+par contre ordre des titres sur ma version non conventionelle car sur la version d'origine il 
+y a une utilisation des titres avec la classe "sr-only". Donc voir si il faut adapter ces titre ou 
+remplacer le h3 par un h1 (sur ma version). 
+Il reste aussi a mettre en place la localisation des liens du Header. 
+
+
+
+Note depuis dernier commit: 
