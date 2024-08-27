@@ -5,6 +5,7 @@ import './assets/index.css';
 import Home from './pages/Home.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import SignIn from './pages/Signin.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -12,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
      <Header />
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route />
+        <Route path="/signin" element={<SignIn />}/>
         <Route />
       </Routes>
      <Footer />

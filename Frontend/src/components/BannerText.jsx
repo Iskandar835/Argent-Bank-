@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 function BannerText ({ Hidetitle, Subtitle1, Subtitle2, Subtitle3, Text }) {
     return (
-        <>  <h2 className="sr-only">{Hidetitle}</h2>
+        <>  
+            <h2 className="sr-only">{Hidetitle}</h2>
             <p className='subtitle'>{Subtitle1}</p>
             <p className='subtitle'>{Subtitle2}</p>
             <p className='subtitle'>{Subtitle3}</p>
