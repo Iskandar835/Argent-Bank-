@@ -1,19 +1,14 @@
 
-
-
-
-
-
-
 function Header () {
     return (
         <nav className="main-nav">
-            <a className="main-nav-logo" href="">
+            <a className="main-nav-logo" href="/">
                 <img
                     className="main-nav-logo-image" 
-                    src="../../designs/img/argentBankLogo.png" 
+                    src="../../src/assets/img/argentBankLogo.png" 
                     alt="Argent Bank Logo"
                 />
+                <h1 className="sr-only">Argent Bank</h1>
             </a>
             <div>
                 <a className="main-nav-item" href="">
@@ -23,6 +18,6 @@ function Header () {
             </div>
         </nav>
     )
-}
+};
 
-export default Header
+export default Header;

@@ -12,3 +12,9 @@ Il reste aussi a mettre en place la localisation des liens du Header.
 
 
 Note depuis dernier commit: 
+
+
+A faire pour demain 27/08/2024 :
+- Tester le backend avec postam
+- Attaquer la page de connexion
+- A la fin du projet nettoyer CSS 
