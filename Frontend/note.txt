@@ -12,11 +12,11 @@ localisation du header fonctionnel.
 
 
 Note depuis dernier commit: 
-
+installation redux,
 
 A faire pour demain 27/08/2024 :
 - se renseigner est ce que c'est mieux de mettre les classes directement dans le composant ? res =>
     tout depend, si le composant est reutiliser avec un style qui peut etre modifier alors il faut passer
     le style en props sinon on peut le laisser dans le composant générique. 
-- Attaquer la page de connexion
+- Page de connexion attaquer mettre en place redux 
 - A la fin du projet nettoyer CSS 
