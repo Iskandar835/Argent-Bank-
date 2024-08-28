@@ -10,15 +10,26 @@ remplacer le h3 par un h1 (sur ma version).
 localisation du header fonctionnel.
 
 
+Sign In page: 
+Le formulaire a était decomposer de la maniere suivante: 
+- Composant Field effectuer (il contient la div qui enferme label et input)
+- Composant Remember effectuer (car il va surement utiliser des fonction et un state, isoler pour + propre)
+- Composant Button effectuer
+Le Formulaire a etait aussi fait en composant "Form" car je pense que par la suite il va recevoir beaucoup
+de reglage donc c'est plus propre de l'isoler. 
+A noter que peut etre il a trop etait decomposer, on verra si a la fin des éléments n'avait pas neccesairement 
+besoin d'etre fait en composant on réajustera et on les fera dans le dure directement dans la page Sign In. 
+
+
 
 Note depuis dernier commit: 
-installation redux,
+
 
 A faire pour demain 28/08/2024 :
 - se renseigner est ce que c'est mieux de mettre les classes directement dans le composant ? res =>
     tout depend, si le composant est reutiliser avec un style qui peut etre modifier alors il faut passer
     le style en props sinon on peut le laisser dans le composant générique. 
-- faire la page de connexion et la page profil en react
+- faire la page profil en react
 - une fois que les composants sont fait avec leurs style et que tout les pages sont fini, mettre en place 
     le state avec redux. 
 - A la fin du projet nettoyer CSS 
