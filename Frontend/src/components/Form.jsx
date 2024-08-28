@@ -9,7 +9,7 @@ function Form () {
             <Field For={"username"} content={"Username"} type={"text"} id={"username"}/>
             <Field For={"password"} content={"Password"} type={"password"} id={"password"}/>
             <Remember />
-            <Button className={"sign-in-button"} onclick={""} title={"Sign In"}/>
+            <Button className={"sign-in-button"} title={"Sign In"}/>
         </form>
     )
 };

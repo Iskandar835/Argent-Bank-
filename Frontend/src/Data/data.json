@@ -23,19 +23,19 @@
         {
             "id": 1,
             "title": "Argent Bank Checking (x8349)",
-            "cash": "$2,082.79",
+            "cash": 2082.79,
             "balance": "Available Balance"
         },
         {
             "id": 2,
             "title":"Argent Bank Savings (x6712)",
-            "cash": "$10,928.42",
+            "cash": 10928.42,
             "balance": "Available Balance"
         },
         {
             "id": 3,
             "title": "Argent Bank Savings (x6712)",
-            "cash": "$184.30",
+            "cash": 184.31,
             "balance": "Current Balance"
         }
 
