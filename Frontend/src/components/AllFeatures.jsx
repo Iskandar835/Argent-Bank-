@@ -5,7 +5,7 @@ import Data from "../Data/data.json";
 function Features () {
     return (
         <section className="features">
-            {Data.map((item) => (
+            {Data.feature.map((item) => (
                 <FeatureItem key={item.id} 
                  cover={item.cover}
                  title={item.title}
