@@ -20,7 +20,10 @@ de reglage donc c'est plus propre de l'isoler.
 A noter que peut etre il a trop etait decomposer, on verra si a la fin des éléments n'avait pas neccesairement 
 besoin d'etre fait en composant on réajustera et on les fera dans le dure directement dans la page Sign In. 
 
-
+User page: 
+Gerer data des transaction en mappant fichier json et adapter les composants avec sa,
+pour cette apres midi gerer la data et la faire propre en fonction de cela (ne pas oublier le clic qui emmene a un
+autre detail de transaction). 
 
 Note depuis dernier commit: 
 
