@@ -21,18 +21,24 @@ A noter que peut etre il a trop etait decomposer, on verra si a la fin des élé
 besoin d'etre fait en composant on réajustera et on les fera dans le dure directement dans la page Sign In. 
 
 User page: 
-Gerer data des transaction en mappant fichier json et adapter les composants avec sa,
-pour cette apres midi gerer la data et la faire propre en fonction de cela (ne pas oublier le clic qui emmene a un
-autre detail de transaction). 
+Pour le form lors de l'dit du username il faudra faire un composant a par, voir aussi avec les classe css present
+et gerer sont state pour que lors du Onclick soit il se diplay none soit il se display flex. 
+
+J'ai fabriquer un composant Account dans lequelle j'ai import mon composant Button,
+plus tard il recevras surement la fonction Onclick, Puis j'ai fait un composant Allaccounts dans 
+lequelle j'ai impoter Account et j'ai mapper ma data avec. Je pense que ces composants vont devoir 
+etre retoucher lors du state managment. 
+
+Transaction page:
 
 Note depuis dernier commit: 
 
 
-A faire pour demain 28/08/2024 :
+A faire pour demain 29/08/2024 :
 - se renseigner est ce que c'est mieux de mettre les classes directement dans le composant ? res =>
     tout depend, si le composant est reutiliser avec un style qui peut etre modifier alors il faut passer
     le style en props sinon on peut le laisser dans le composant générique. 
-- faire la page profil en react
+- Finir page transaction, finir form pour change username
 - une fois que les composants sont fait avec leurs style et que tout les pages sont fini, mettre en place 
     le state avec redux. 
 - A la fin du projet nettoyer CSS 
