@@ -39,6 +39,9 @@ body {
   white-space: nowrap !important; /* 3 */
 }
 
+
+/****  HEADER  ****/
+
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -55,15 +58,6 @@ body {
   color: #42b983;
 }
 
-.main-nav-item {
-  text-decoration: none;
-  margin-right: 0.5rem;
-}
-
-.main-nav-item:hover {
-  text-decoration: underline;
-}
-
 .main-nav-logo {
   display: flex;
   align-items: center;
@@ -74,6 +68,19 @@ body {
   width: 200px;
 }
 
+.main-nav-item {
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.main-nav-item:hover {
+  text-decoration: underline;
+}
+
+
+/**** MAIN ****/
+
+/** homepage **/
 .hero {
   background-image: url('./img/bank-tree.jpeg');
   background-position: 0 -50px;
@@ -127,15 +134,15 @@ body {
   }
 }
 
+/* features section  */
 .features {
   display: flex;
   flex-direction: column;
 }
 
-@media (min-width: 920px) {
-  .features {
-    flex-direction: row;
-  }
+.feature-item {
+  flex: 1;
+  padding: 2.5rem;
 }
 
 .feature-icon {
@@ -145,16 +152,55 @@ body {
   padding: 1rem;
 }
 
-.feature-item {
-  flex: 1;
-  padding: 2.5rem;
-}
-
 .feature-item-title {
   color: #222;
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+}
+
+@media (min-width: 920px) {
+  .features {
+    flex-direction: row;
+  }
+}
+
+/** sign in page **/
+.sign-in-content {
+  box-sizing: border-box;
+  background-color: white;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.sign-in-icon {
+  font-size: 5rem;
+}
+
+.input-wrapper input {
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.input-wrapper label {
+  font-weight: bold;
+}
+
+.input-remember {
+  display: flex;
+}
+
+.input-remember label {
+  margin-left: 0.25rem;
 }
 
 .sign-in-button {
@@ -169,53 +215,19 @@ body {
   color: #fff;
 }
 
-.sign-in-content {
-  box-sizing: border-box;
-  background-color: white;
-  width: 300px;
-  margin: 0 auto;
-  margin-top: 3rem;
-  padding: 2rem;
+
+/** user page **/
+.header {
+  color: #fff;
+  margin-bottom: 2rem;
 }
 
-.sign-in-icon {
-  font-size: 5rem;
-}
-
-.input-remember {
-  display: flex;
-}
-
-.input-remember label {
-  margin-left: 0.25rem;
-}
-
-.input-wrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-.input-wrapper label {
+.edit-button {
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
   font-weight: bold;
-}
-
-.input-wrapper input {
-  padding: 5px;
-  font-size: 1.2rem;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  border-top: 2px solid #ccc;
-  padding: 2rem 0 1.5rem;
-}
-
-.footer-text {
-  margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 .account {
@@ -233,14 +245,9 @@ body {
   margin-bottom: 2rem;
 }
 
-.account-amount {
-  margin: 0;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.account-amount-description {
-  margin: 0;
+.account-content-wrapper {
+  width: 100%;
+  flex: 1;
 }
 
 .account-title {
@@ -250,22 +257,14 @@ body {
   font-weight: normal;
 }
 
-.account-content-wrapper {
-  width: 100%;
-  flex: 1;
-}
-
-.edit-button {
-  border-color: #00bc77;
-  background-color: #00bc77;
-  color: #fff;
+.account-amount {
+  margin: 0;
+  font-size: 2.5rem;
   font-weight: bold;
-  padding: 10px;
 }
 
-.header {
-  color: #fff;
-  margin-bottom: 2rem;
+.account-amount-description {
+  margin: 0;
 }
 
 .transaction-button {
@@ -292,4 +291,51 @@ body {
   .transaction-button {
     width: 200px;
   }
+}
+
+/** transaction page  **/
+.main-transaction {
+  padding-top: 45px;
+}
+
+.section-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-content {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  gap: 600px;
+}
+
+.first-table-row,
+.second-table-row {
+  display: flex;
+  color: #fff;
+}
+
+.first-table-row {
+  gap: 130px;
+  margin-left: 25px;
+}
+
+.second-table-row {
+  gap: 55px;
+}
+
+
+/**** FOOTER ****/
+
+.footer {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #ccc;
+  padding: 2rem 0 1.5rem;
+}
+
+.footer-text {
+  margin: 0;
+  padding: 0;
 }
