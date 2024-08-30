@@ -1,3 +1,5 @@
+/**** GENERAL ****/
+
 html {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -291,38 +293,6 @@ body {
   .transaction-button {
     width: 200px;
   }
-}
-
-/** transaction page  **/
-.main-transaction {
-  padding-top: 45px;
-}
-
-.section-table {
-  display: flex;
-  flex-direction: column;
-}
-
-.table-content {
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-  gap: 600px;
-}
-
-.first-table-row,
-.second-table-row {
-  display: flex;
-  color: #fff;
-}
-
-.first-table-row {
-  gap: 130px;
-  margin-left: 25px;
-}
-
-.second-table-row {
-  gap: 55px;
 }
 
 

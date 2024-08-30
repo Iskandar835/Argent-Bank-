@@ -11,17 +11,14 @@ import './assets/index.css';
 const store = configureStore({
   reducer: rootReducer,
   devTools: true,
-})
+});
 
 // FILES 
 import Home from './pages/Home.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import SignIn from './pages/Signin.jsx';
-import User from './pages/User.jsx'
-import Transaction from './pages/transactions.jsx';
-
-
+import User from './pages/User.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -33,7 +30,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Home />}/>
         <Route path="/signin" element={<SignIn />}/>
         <Route path="/user" element={<User />}/>
-        <Route path="/transactions" element={<Transaction />}/>
         <Route />
       </Routes>
      <Footer />
