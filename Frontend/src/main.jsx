@@ -14,6 +14,7 @@ const store = configureStore({
 });
 
 // FILES 
+import PrivateRoute from './components/PrivateRoute.jsx';
 import Home from './pages/Home.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
@@ -29,7 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/signin" element={<SignIn />}/>
-        <Route path="/user" element={<User />}/>
+        <Route path="/user" element={<PrivateRoute><User /></PrivateRoute>}/>
         <Route />
       </Routes>
      <Footer />

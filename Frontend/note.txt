@@ -23,22 +23,39 @@ besoin d'etre fait en composant on réajustera et on les fera dans le dure direc
 User page: 
 Pour le form lors de l'dit du username il faudra faire un composant a par, voir aussi avec les classe css present
 et gerer sont state pour que lors du Onclick soit il se diplay none soit il se display flex. 
-
 J'ai fabriquer un composant Account dans lequelle j'ai import mon composant Button,
 plus tard il recevras surement la fonction Onclick, Puis j'ai fait un composant Allaccounts dans 
 lequelle j'ai impoter Account et j'ai mapper ma data avec. Je pense que ces composants vont devoir 
 etre retoucher lors du state managment. 
 
-Transaction page:
+algorythme:
+
+Pour la connexion il faut :
+Que j'envoi l'identifiant et le mot de passe a l'api pour recuperer le token. Si identifiant ou mot de passe 
+incorrect un message d'erreur est afficher et le form ne s'envoi pas. 
+Quand je recois le token je le stock en local storage, uniquement un fois le token reçu affichage de la page des comptes. 
+En cas de remember me cocher token stocker dans le session storage. 
+
+
+pour le changement de username les deux input qu'on ne peut pas modifier ne pas leurs mettre de onChange sa risque 
+de marcher tout seul. 
+
+
+note 04/09/2024 :
+Apres manger comprendre post.reducer et comment l'utiliser car maintenant que le connexion est bonne,
+il va falloir etre rediriger et stocker le token. Travailler assis pour + de focus
 
 Note depuis dernier commit: 
 
 
-A faire pour demain 29/08/2024 :
+A faire pour demain 03/09/2024 :
+
+- form fonctionnel voir pour stocker token 
+
+
 - se renseigner est ce que c'est mieux de mettre les classes directement dans le composant ? res =>
     tout depend, si le composant est reutiliser avec un style qui peut etre modifier alors il faut passer
     le style en props sinon on peut le laisser dans le composant générique. 
-- Finir page transaction, finir form pour change username
+- finir form pour change username
 - une fois que les composants sont fait avec leurs style et que tout les pages sont fini, mettre en place 
     le state avec redux. 
-- A la fin du projet nettoyer CSS 
