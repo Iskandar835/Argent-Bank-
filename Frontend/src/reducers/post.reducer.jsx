@@ -1,6 +1,7 @@
 import { SIGN_IN } from "../actions/post.action";
 import { SET_TOKEN } from "../actions/post.action";
 
+
 const initialState = { 
     token: localStorage.getItem('token') || null
 };
@@ -12,7 +13,7 @@ export default function postReducer(state = initialState, action) {
         default:
             return state;
     } 
-}
+};
 
 export const authReducer = (state = initialState, action) => {
     switch (action.type) {

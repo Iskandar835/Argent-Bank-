@@ -5,7 +5,7 @@ function FieldWrapper ({ For, content, type, id }) {
     return (
         <div className='input-wrapper'>
             <label htmlFor={For}>{content}</label>
-            <input type={type} id={id} />
+            <input type={type} id={id} required/>
         </div>
     )
 };

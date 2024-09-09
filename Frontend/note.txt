@@ -21,12 +21,22 @@ A noter que peut etre il a trop etait decomposer, on verra si a la fin des élé
 besoin d'etre fait en composant on réajustera et on les fera dans le dure directement dans la page Sign In. 
 
 User page: 
-Pour le form lors de l'dit du username il faudra faire un composant a par, voir aussi avec les classe css present
+Cette est securisé par le composant PrivateRoute qui nous permet l'acces a cette page uniquement si le token est 
+present dans le store.
+Pour le form lors de l'edit du username il faudra faire un composant a par, voir aussi avec les classe css present
 et gerer sont state pour que lors du Onclick soit il se diplay none soit il se display flex. 
 J'ai fabriquer un composant Account dans lequelle j'ai import mon composant Button,
 plus tard il recevras surement la fonction Onclick, Puis j'ai fait un composant Allaccounts dans 
 lequelle j'ai impoter Account et j'ai mapper ma data avec. Je pense que ces composants vont devoir 
 etre retoucher lors du state managment. 
+
+Formulaire: 
+Le formulaire est operationnel il permet la connexion a la base de donnée, lors de l'entré du username et su mot de passe
+le token est recupéré, stocker dans le local storage. A partir de la il est recuperer du local storage et mis dans le store. 
+Cepedant il manque la redirection (voir note date)
+
+
+
 
 algorythme:
 
@@ -36,21 +46,19 @@ incorrect un message d'erreur est afficher et le form ne s'envoi pas.
 Quand je recois le token je le stock en local storage, uniquement un fois le token reçu affichage de la page des comptes. 
 En cas de remember me cocher token stocker dans le session storage. 
 
-
-pour le changement de username les deux input qu'on ne peut pas modifier ne pas leurs mettre de onChange sa risque 
+pour le changement de username:
+Les deux input qu'on ne peut pas modifier ne pas leurs mettre de onChange sa risque 
 de marcher tout seul. 
 
-
-note 04/09/2024 :
-Apres manger comprendre post.reducer et comment l'utiliser car maintenant que le connexion est bonne,
-il va falloir etre rediriger et stocker le token. Travailler assis pour + de focus
 
 Note depuis dernier commit: 
 
 
-A faire pour demain 03/09/2024 :
+A faire pour demain 06/09/2024 : 
+Une fois cela fait commencer le logout present dans le header.
+Ensuite le remember me. 
+Ensuite le edit user. 
 
-- form fonctionnel voir pour stocker token 
 
 
 - se renseigner est ce que c'est mieux de mettre les classes directement dans le composant ? res =>

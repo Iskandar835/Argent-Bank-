@@ -1,5 +1,3 @@
-import { Navigate } from "react-router-dom";
-
 export const SIGN_IN = "SIGN_IN";
 
 export const signIn = (data) => {
@@ -12,18 +10,15 @@ export const signIn = (data) => {
                 },
                 body: JSON.stringify(data),
             });
-            
-            const result = await response.json();
-            localStorage.setItem('token', result.body.token);
-            dispatch({ type: SIGN_IN, payload: result });
-            <Navigate to="/user" />
-
-
+            const result = await response.json()
+            localStorage.setItem('token', result.body.token)
+            dispatch({ type: SIGN_IN, payload: result })
+        
         } catch (error) {
-            alert("Sorry we are having a problem, please try again later");
-            console.error("There was an error!", error);
+            alert("Sorry we are having a problem, please try again later")
+            console.error("There was an error!", error)
         }
-    };
+    }
 };
 
 
@@ -33,5 +28,5 @@ export const setToken = (token) => {
     return {
         type: SET_TOKEN,
         payload: token
-    };
+    }
 };
