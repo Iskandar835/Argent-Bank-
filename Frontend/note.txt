@@ -33,7 +33,11 @@ etre retoucher lors du state managment.
 Formulaire: 
 Le formulaire est operationnel il permet la connexion a la base de donnée, lors de l'entré du username et su mot de passe
 le token est recupéré, stocker dans le local storage. A partir de la il est recuperer du local storage et mis dans le store. 
-Cepedant il manque la redirection (voir note date)
+Pour la redirection, la page User est proteger par la possesion du token en localstorage. Lors de l'envoi du form, la fonction 
+redirection attent 2s avant de se mettre en route, pour attendre l'arriver du token dans le localstorage (sa evite les bug de 
+redirection alors que le token n'est pas present dans le localstorage). 
+Bug detecter dans le store avec le token, lors de l'envoi du form le token est present dans un objet du store, mais si il y a 
+un refresh de la page il est de suite present, d'ou le probleme de connexion sans raffraichir la page (il faut eclaircir se PB). 
 
 
 
@@ -55,7 +59,9 @@ Note depuis dernier commit:
 
 
 A faire pour demain 06/09/2024 : 
-Une fois cela fait commencer le logout present dans le header.
+---Une fois cela fait commencer le logout present dans le header.
+
+
 Ensuite le remember me. 
 Ensuite le edit user. 
 

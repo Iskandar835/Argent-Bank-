@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { signIn } from "../actions/post.action";
 import Field from "../components/Field";
@@ -11,7 +11,12 @@ function Form () {
     const form = useRef();
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const token = useSelector((state) => state.auth.token);
+
+    const redirection = () => {
+        setTimeout(() => {
+            navigate("/user")
+        }, 2000)
+    };
     
     const handleForm = (e) => {
         e.preventDefault()
@@ -21,20 +26,15 @@ function Form () {
             }
             dispatch(signIn(postData))
             form.current.reset()
+            redirection()
         };
     
-    const redirection = () => {
-        if (token) {
-            navigate('/user')
-        }
-    };
-
     return (
         <form ref={form} onSubmit={e => handleForm(e)}>
             <Field For={"username"} content={"Username"} type={"email"} id={"username"}/>
             <Field For={"password"} content={"Password"} type={"password"} id={"password"} />
             <Remember />
-            <Button className={"sign-in-button"} onclick={redirection} title={"Sign In"} />
+            <Button className={"sign-in-button"} title={"Sign In"} />
         </form>
     )
 };
