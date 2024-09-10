@@ -32,23 +32,18 @@ etre retoucher lors du state managment.
 
 Formulaire: 
 Le formulaire est operationnel il permet la connexion a la base de donnée, lors de l'entré du username et su mot de passe
-le token est recupéré, stocker dans le local storage. A partir de la il est recuperer du local storage et mis dans le store. 
+le token est recupéré, stocker dans le local storage. A partir de la il est recuperer du local storage et mis dans le store 
+de redux avec un chemin inchangeable (meme structure apres refresh) pour faciliter la recuperation
+de celui ci. 
 Pour la redirection, la page User est proteger par la possesion du token en localstorage. Lors de l'envoi du form, la fonction 
-redirection attent 2s avant de se mettre en route, pour attendre l'arriver du token dans le localstorage (sa evite les bug de 
+redirection attent 1s avant de se mettre en route, pour attendre l'arriver du token dans le localstorage (sa evite les bug de 
 redirection alors que le token n'est pas present dans le localstorage). 
-Bug detecter dans le store avec le token, lors de l'envoi du form le token est present dans un objet du store, mais si il y a 
-un refresh de la page il est de suite present, d'ou le probleme de connexion sans raffraichir la page (il faut eclaircir se PB). 
+ 
 
 
 
 
 algorythme:
-
-Pour la connexion il faut :
-Que j'envoi l'identifiant et le mot de passe a l'api pour recuperer le token. Si identifiant ou mot de passe 
-incorrect un message d'erreur est afficher et le form ne s'envoi pas. 
-Quand je recois le token je le stock en local storage, uniquement un fois le token reçu affichage de la page des comptes. 
-En cas de remember me cocher token stocker dans le session storage. 
 
 pour le changement de username:
 Les deux input qu'on ne peut pas modifier ne pas leurs mettre de onChange sa risque 
@@ -62,7 +57,7 @@ A faire pour demain 06/09/2024 :
 ---Une fois cela fait commencer le logout present dans le header.
 
 
-Ensuite le remember me. 
+Ensuite le remember me (session storage). 
 Ensuite le edit user. 
 
 
@@ -71,5 +66,3 @@ Ensuite le edit user.
     tout depend, si le composant est reutiliser avec un style qui peut etre modifier alors il faut passer
     le style en props sinon on peut le laisser dans le composant générique. 
 - finir form pour change username
-- une fois que les composants sont fait avec leurs style et que tout les pages sont fini, mettre en place 
-    le state avec redux. 

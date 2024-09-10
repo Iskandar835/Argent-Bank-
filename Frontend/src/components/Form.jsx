@@ -15,7 +15,7 @@ function Form () {
     const redirection = () => {
         setTimeout(() => {
             navigate("/user")
-        }, 2000)
+        }, 1000)
     };
     
     const handleForm = (e) => {

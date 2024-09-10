@@ -10,23 +10,14 @@ export const signIn = (data) => {
                 },
                 body: JSON.stringify(data),
             });
+            
             const result = await response.json()
             localStorage.setItem('token', result.body.token)
-            dispatch({ type: SIGN_IN, payload: result })
+            dispatch({ type: SIGN_IN, payload: result }) 
         
         } catch (error) {
             alert("Sorry we are having a problem, please try again later")
             console.error("There was an error!", error)
         }
-    }
-};
-
-
-export const SET_TOKEN = "SET_TOKEN";
-
-export const setToken = (token) => {
-    return {
-        type: SET_TOKEN,
-        payload: token
     }
 };
