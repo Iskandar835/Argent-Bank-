@@ -1,3 +1,5 @@
+import ConnectButton from "./ConnectButton";
+
 
 function Header () {
     return (
@@ -12,10 +14,8 @@ function Header () {
                 <h1 className="sr-only">Argent Bank</h1>
             </a>
             <div>
-                <a className="main-nav-item" href="/signin">
-                    <i className="fa fa-user-circle"></i>
-                    Sign In
-                </a>
+                <i className="fa fa-user-circle"></i>
+                <ConnectButton />
             </div>
         </nav>
       </header>

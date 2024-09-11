@@ -39,6 +39,10 @@ Pour la redirection, la page User est proteger par la possesion du token en loca
 redirection attent 1s avant de se mettre en route, pour attendre l'arriver du token dans le localstorage (sa evite les bug de 
 redirection alors que le token n'est pas present dans le localstorage). 
  
+ boutton de connexion : 
+ Le composant ConnectButton recupere le token present dans le store, des conditions dans la JSX sont faite pour que si le token 
+ est present, dans le header Sign Out est afficher et si il n'est pas present c'est Sign in qui est afficher. Une fonction est aussi
+ faite pour que lors du clique sur Sign Out le token est delete du local storage ce qui l'enlevera automatiquement du store. 
 
 
 
@@ -53,8 +57,7 @@ de marcher tout seul.
 Note depuis dernier commit: 
 
 
-A faire pour demain 06/09/2024 : 
----Une fois cela fait commencer le logout present dans le header.
+A faire pour demain 11/09/2024 : 
 
 
 Ensuite le remember me (session storage). 
