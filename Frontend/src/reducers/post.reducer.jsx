@@ -1,10 +1,13 @@
-import { SIGN_IN } from "../actions/post.action";
+import { SIGN_IN, GET_USER } from "../actions/post.action";
 
 
 const initialState = {
     status: null,
     message: '',
-    body: localStorage.getItem('token') ? { token: localStorage.getItem('token') } : {}
+    body: {
+        user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null,
+        token: localStorage.getItem('token') ? localStorage.getItem('token') : null
+    }
 };
 
 export default function postReducer(state = initialState, action) {
@@ -14,9 +17,21 @@ export default function postReducer(state = initialState, action) {
                 ...state,
                 status: action.payload.status,
                 message: action.payload.message,
-                body: action.payload.body,
-                token: action.payload.body.token
+                body: {
+                    ...state.body, 
+                    token: action.payload.body.token 
+                }
             };
+            case GET_USER:
+            return {
+                ...state,
+                status: action.payload.status,
+                message: action.payload.message,
+                body: {
+                    ...state.body, 
+                    user: action.payload.body 
+                }
+            };    
         default:
             return state;
     } 

@@ -79,6 +79,16 @@ body {
   text-decoration: underline;
 }
 
+.main-nav-icon {
+  margin: 0 0.3rem;
+}
+
+@media (max-width: 720px) {
+  .main-nav-icon {
+    margin: 0;
+  }
+}
+
 
 /**** MAIN ****/
 

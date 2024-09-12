@@ -1,4 +1,5 @@
 import ConnectButton from "./ConnectButton";
+import UsersProfile from "./UserInHeader";
 
 
 function Header () {
@@ -14,7 +15,7 @@ function Header () {
                 <h1 className="sr-only">Argent Bank</h1>
             </a>
             <div>
-                <i className="fa fa-user-circle"></i>
+                <UsersProfile />
                 <ConnectButton />
             </div>
         </nav>
