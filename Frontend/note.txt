@@ -44,7 +44,7 @@ Le composant ConnectButton recupere le token present dans le store, des conditio
 est present, dans le header Sign Out est afficher et si il n'est pas present c'est Sign in qui est afficher. Une fonction est aussi
 faite pour que lors du clique sur Sign Out le token est delete du local storage ce qui l'enlevera automatiquement du store. 
 
-header user profil: 
+UserInHeader: 
 NOUVELLE ACTION fabriquer "GET_USER", elle permet de recuperer les profil data de l'utilisateur qui se connect. Elle se met en route
 lors de la redirection (setTimeout) un fois que le formulaire a etait soumis et qu'on a recu le token.
 Dans le reducer "SINGN_IN" et "GET_USER" sont structer de façon a avoir un body qui contient deux objet : user et token. La structure du 
@@ -52,6 +52,11 @@ initiale state est pareil pour que lors du refresh le path ne change pas. Le sto
 SINON pour l'affichage du firstname dans le header un composant a etait fait (UserInHeader), celui ci recuper cette donnée du store
 pour l'afficher dans le JSX. 
 CSS arranger pour un resulat plus propre.
+
+Composant User: 
+Meme principe que pour UserInHeader, comme l'action GET_USER est deja faite il faut juste apeller les data dans le composant.
+ATTENTION a mettre la condition si user est true, sinon les data sont recuperer avant qu'elles ne soient presentes dans le store et sa crash. 
+Voir comment on peut assembler first name et lastName car il sont dans deux element different. 
 
 
 algorythme:
@@ -63,7 +68,8 @@ de marcher tout seul.
 
 
 Note depuis dernier commit: 
-
+changement nom function UsersProfile par UserInHeader/ UserInHeader optimiser pour afficher userName/ Composant Username optimiser dans la page 
+user pour afficher le userName
 
 A faire pour demain 13/09/2024 : 
 
