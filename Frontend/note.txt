@@ -72,11 +72,10 @@ changement nom function UsersProfile par UserInHeader/ UserInHeader optimiser po
 user pour afficher le userName
 
 A faire pour demain 13/09/2024 : 
-
+Reprendre le form edit user et le faire fonctionner 
 
 Ensuite le remember me (session storage). 
-Username present dans welcolm back et a coter de l'icon
-Ensuite le edit user. 
+ 
 
 
 
