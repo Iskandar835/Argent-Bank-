@@ -33,8 +33,8 @@ function Form () {
     
     return (
         <form ref={form} onSubmit={e => handleForm(e)}>
-            <Field For={"username"} content={"Username"} type={"email"} id={"username"}/>
-            <Field For={"password"} content={"Password"} type={"password"} id={"password"} />
+            <Field For={"username"} content={"Username"} type={"email"} id={"username"} required={"required"}/>
+            <Field For={"password"} content={"Password"} type={"password"} id={"password"} required={"required"}/>
             <Remember />
             <Button className={"sign-in-button"} title={"Sign In"} />
         </form>

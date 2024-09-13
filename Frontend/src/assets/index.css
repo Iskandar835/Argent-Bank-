@@ -242,6 +242,16 @@ body {
   padding: 10px;
 }
 
+.form-edit {
+  margin-bottom: 2rem;
+}
+
+.form-edit-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 .account {
   display: flex;
   justify-content: space-between;
