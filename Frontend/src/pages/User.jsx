@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import AllAccounts from "../components/AllAcounts";
 import FormEditUser from "../components/FormEditUser";
 import Button from "../components/Button";
@@ -16,8 +16,10 @@ function User () {
     };
 
     const closeForm = () => {
-        setFormOpened(formOpened) 
-        setEditUser(editUser)
+        setTimeout(() => {
+            setEditUser(true)
+            setFormOpened(true)
+        }, 100) 
     };
     
     return (
@@ -33,7 +35,9 @@ function User () {
                     <div className="header">
                         <h1>Edit user info</h1>
                     </div>
-                    <FormEditUser clickCancel={closeForm}/>
+                    <section className="sign-in-content form-edit">
+                        <FormEditUser clickSave={closeForm} clickCancel={closeForm}/>
+                    </section>
                 </>
             )}
             <h2 className="sr-only">Accounts</h2>

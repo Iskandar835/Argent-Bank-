@@ -46,3 +46,27 @@ export const getUser = () => {
         }
     }
 };
+
+export const CHANGE_USERNAME = "CHANGE_USERNAME";
+
+export const changeUsername = (data) => {
+    return async (dispatch) => {
+        try {
+            const token = localStorage.getItem("token")
+            const sendData = await fetch("http://localhost:3001/api/v1/user/profile", {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
+                },
+                body: JSON.stringify(data),
+            });
+            const result = await sendData.json()
+            localStorage.setItem('username', JSON.stringify(result.body.userName))
+            dispatch({ type: CHANGE_USERNAME, payload: result })
+        } catch (error) {
+            alert("Sorry we are having a problem, please try again later")
+            console.error("There was an error!", error)
+        }
+    }
+};

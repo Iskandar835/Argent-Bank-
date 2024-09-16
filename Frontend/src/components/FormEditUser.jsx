@@ -1,29 +1,42 @@
 import PropTypes from 'prop-types';
-import { useSelector } from "react-redux";
+import { useRef } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { changeUsername } from '../actions/post.action';
 import FieldWrapper from "./Field";
 import Button from "./Button";
 
 
-function FormEditUser ({ cancelClick, saveClick }) {
+function FormEditUser ({ clickSave, clickCancel }) {
+    const editForm = useRef();
+    const dispatch = useDispatch();
+
+    const handleForm = (e) => {
+        e.preventDefault()
+            const data = {
+                userName: editForm.current[0].value
+            }
+            dispatch(changeUsername(data)) 
+            editForm.current.reset()
+        }; 
+    
     const user = useSelector((state) => state.postReducer.body.user);
+        
     return (
-        <section className="sign-in-content form-edit">
-            <form>
+            <form ref={editForm} onSubmit={e => handleForm(e)}>
                 <FieldWrapper For={"username"} content={"User name"} type={"text"} id={"username"}/>
                 <FieldWrapper For={"firstname"} content={"First name"} type={"text"} placeholder={user?.firstName} id={"firstname"} active={"disabled"}/>
                 <FieldWrapper For={"lastname"} content={"Last name"} type={"text"}  placeholder={user?.lastName} id={"lastname"} active={"disabled"}/>
                 <div className="form-edit-buttons">
-                    <Button className={"transaction-button"} title={"Save"} onClick={saveClick}/>
-                    <Button className={"transaction-button"} title={"Cancel"} onClick={cancelClick}/>
+                    <Button className={"transaction-button"} type={"submit"} onClick={clickSave} title={"Save"}/>
+                    <Button className={"transaction-button"} type={"button"} onClick={clickCancel} title={"Cancel"}/>
                 </div>
             </form>
-        </section>
     )
 };
 
 FormEditUser.propTypes = {
-    saveClick: PropTypes.func,
-    cancelClick: PropTypes.func
+    clickSave: PropTypes.func,
+    clickCancel: PropTypes.func
 };
 
 export default FormEditUser;
