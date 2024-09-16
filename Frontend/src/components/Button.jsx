@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 
 
-function Button ({ className, onclick, title }) {
+function Button ({ className, onClick, title }) {
     return (
         <>
             <button 
             className={className}
-            onClick={onclick}
+            onClick={onClick}
             >{title}</button>
         </>
     )
@@ -14,7 +14,7 @@ function Button ({ className, onclick, title }) {
 
 Button.propTypes = {
     className: PropTypes.string,
-    onclick: PropTypes.func,
+    onClick: PropTypes.func,
     title: PropTypes.string
 };
 
