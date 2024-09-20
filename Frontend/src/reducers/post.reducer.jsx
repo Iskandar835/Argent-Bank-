@@ -5,12 +5,19 @@ const initialState = {
     status: null,
     message: '',
     body: {
-        user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null,
-        token: localStorage.getItem('token') ? localStorage.getItem('token') : null,
+        user: JSON.parse(sessionStorage.getItem('user')) || JSON.parse(localStorage.getItem('user')) || {
+            email: null,
+            firstName: null,
+            lastName: null,
+            userName: null,  
+            createdAt: null,
+            updatedAt: null,
+            id: null
+        },
+        token: sessionStorage.getItem('token') || localStorage.getItem('token') || null
     }
 };
 
-//*** SOLUTION QUI MARCHE PARFAITEMENT MAIS PETIT PB POUR LE REFRESH AVEC CHANGE_USERNAME ***
 export default function postReducer(state = initialState, action) {
     switch (action.type) {
         case SIGN_IN: 
@@ -31,7 +38,7 @@ export default function postReducer(state = initialState, action) {
                     body: {
                         ...state.body,
                         user: {
-                            ...action.payload.body
+                            ...action.payload.body  
                         }
                     }
                 };
@@ -41,13 +48,13 @@ export default function postReducer(state = initialState, action) {
                     status: action.payload.status,
                     message: action.payload.message,
                     body: {
-                        ...state.body,
+                        ...state.body, 
                         user: {
                             ...state.body.user,  
                             userName: action.payload.body.userName 
                         }
                     }
-                }    
+                };
             default:
             return state;
     } 

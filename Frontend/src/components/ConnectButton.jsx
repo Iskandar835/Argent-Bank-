@@ -2,12 +2,12 @@ import { useSelector } from "react-redux";
 
 
 function ConnectButton() {
-    const token = useSelector((state) => state.postReducer.body.token)
+    const token = useSelector((state) => state.postReducer.body.token);
     
     const handleSignOut = () => {
-        localStorage.removeItem("token")
-        localStorage.removeItem("user")
-    }
+        sessionStorage.removeItem("token") || localStorage.removeItem("token")
+        sessionStorage.removeItem("user") || localStorage.removeItem("user")
+    };
 
     return (
         <>

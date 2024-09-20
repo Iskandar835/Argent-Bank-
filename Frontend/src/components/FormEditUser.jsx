@@ -15,7 +15,7 @@ function FormEditUser ({ clickSave, clickCancel }) {
             const data = {
                 userName: editForm.current[0].value
             }
-            dispatch(changeUsername(data)) 
+            dispatch(changeUsername(data))
             editForm.current.reset()
         }; 
     
