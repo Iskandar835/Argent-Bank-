@@ -1,12 +1,20 @@
 import HomeBanner from "../components/Banner";
-import Features from "../components/Allfeatures";
+import FeatureItem from "../components/Feature";
+import Data from "../Data/data.json";
 
 
 function Home () {
     return(
         <main>
             <HomeBanner/>
-            <Features />
+            <section className="features">
+                {Data.feature.map((item) => (
+                    <FeatureItem key={item.id} 
+                    cover={item.cover}
+                    title={item.title}
+                    content={item.content} />
+                ))}
+            </section>
         </main>
     )
 };
