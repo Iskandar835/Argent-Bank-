@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { signIn } from "../actions/post.action";
-import { getUser } from "../actions/post.action";
 import Field from "../components/Field";
 import Remember from "./RememberMe";
 import Button from "./Button";
@@ -20,20 +19,12 @@ function Form () {
             email: form.current[0].value,
             password: form.current[1].value
         }
-        dispatch(signIn(postData, checked))
+        dispatch(signIn(postData, checked, navigate))
             form.current.reset()
-            redirection()
         };
         
     const handleChekbox = (e) => {
         setChecked(e.target.checked)
-    };
-        
-    const redirection = () => {
-        setTimeout(() => {
-            navigate("/user")
-            dispatch(getUser(checked))
-        }, 1000)
     };
     
     return (

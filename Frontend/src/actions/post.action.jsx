@@ -1,6 +1,6 @@
 export const SIGN_IN = "SIGN_IN";
 
-export const signIn = (data, checked) => {
+export const signIn = (data, checked, navigate) => {
     return async (dispatch) => {
         try {
             const response = await fetch("http://localhost:3001/api/v1/user/login", {
@@ -19,6 +19,8 @@ export const signIn = (data, checked) => {
               };
             
             dispatch({ type: SIGN_IN, payload: result });
+            dispatch(getUser(checked))
+            navigate("/user");
             
         } catch (error) {
             alert("Sorry we are having a problem, please try again later");

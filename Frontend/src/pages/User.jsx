@@ -16,10 +16,8 @@ function User () {
     };
 
     const closeForm = () => {
-        setTimeout(() => {
-            setEditUser(true)
-            setFormOpened(true)
-        }, 100) 
+        setEditUser(true)
+        setFormOpened(true)
     };
     
     return (
@@ -36,7 +34,7 @@ function User () {
                         <h1>Edit user info</h1>
                     </div>
                     <section className="sign-in-content form-edit">
-                        <FormEditUser clickSave={closeForm} clickCancel={closeForm}/>
+                        <FormEditUser clickCancel={closeForm}/>
                     </section>
                 </>
             )}

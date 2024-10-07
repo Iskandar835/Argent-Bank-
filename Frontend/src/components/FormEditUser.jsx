@@ -23,7 +23,7 @@ function FormEditUser ({ clickSave, clickCancel }) {
         
     return (
             <form ref={editForm} onSubmit={e => handleForm(e)}>
-                <FieldWrapper For={"username"} content={"User name"} type={"text"} id={"username"}/>
+                <FieldWrapper For={"username"} content={"User name"} type={"text"} id={"username"} required={"required"}/>
                 <FieldWrapper For={"firstname"} content={"First name"} type={"text"} placeholder={user?.firstName} id={"firstname"} active={"disabled"}/>
                 <FieldWrapper For={"lastname"} content={"Last name"} type={"text"}  placeholder={user?.lastName} id={"lastname"} active={"disabled"}/>
                 <div className="form-edit-buttons">
